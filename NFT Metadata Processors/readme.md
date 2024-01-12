@@ -1,46 +1,26 @@
-# NFT Metadata Processing Tool
+# NFT Metadata Processing Toolkit
 
-This repository contains two scripts for processing NFT metadata. The first script calculates the rarity of each attribute across all NFTs, and the second script merges individual metadata files into a single file.
+Simple Python scripts to manage NFT metadata, including rarity calculation and metadata merging for NFT collections.
 
-## File 1: Rarity Calculator
+## Scripts
 
-### Description
+### `MetadataMerger_vF.py`
+Merges multiple `.json` metadata files into a single `metadata.json`. Ensure all `.json` files are in the `./metadata` directory before running.
 
-This script loads metadata from a series of JSON files in a folder named `metadata`. It then calculates the rarity of each attribute and assigns a rank to each NFT based on this rarity. Finally, it updates the NFT metadata back to the JSON files.
+### `MetadataRarityCalculator_vF.py`
+Calculates rarity scores for NFT attributes and updates the metadata files with these scores. Make sure your `.json` files are in the `./metadata` directory.
 
-### Usage
+## Usage
 
-- Ensure your JSON files are located in a folder named `metadata`.
-- Run the script.
+1. Place your `.json` metadata files in the `./metadata` directory.
+2. Run the desired script with Python:
+   ```shell
+   python MetadataMerger_vF.py
+   python MetadataRarityCalculator_vF.py
 
-### Features
+## Requirements
+Python 3.8+
+JSON files in the ./metadata directory
 
-1. Load NFT metadata from JSON files.
-2. Calculate the count of each trait value across all NFTs.
-3. Calculate the rarity of each attribute.
-4. Calculate the average rarity of each NFT.
-5. Sort NFTs by rarity and rank them.
-6. Save the updated metadata back to the original JSON files.
-
-## File 2: Metadata Merger
-
-### Description
-
-This script reads individual metadata files from the `./metadata` folder, merges them, and then writes the merged data to a single `metadata.json` file.
-
-### Usage
-
-- Ensure your metadata files are located in the `./metadata` directory.
-- Run the script.
-
-### Features
-
-1. Read individual metadata files.
-2. Merge individual metadata files into a combined list.
-3. Adjust the image link for each NFT.
-4. Write the merged metadata to a single `metadata.json` file.
-
----
-
-Note: Always backup your data before running any scripts to prevent any unwanted modifications or data loss.
-
+## Credits
+All tools, instructions, and resources curated with 💼 by Zep. For questions, feedback, or collaborations, connect with me on the xPEPE Discord.
